@@ -1,0 +1,18 @@
+name: CI Every 3 Hours
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"  
+  workflow_dispatch:       
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run CI script
+        run: |
+          echo "Running build/test process at $(date)"
+          # your build/test/deploy commands go here
