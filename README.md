@@ -1,2 +1,2 @@
 # newsapi-Test
-A demo for using teraform and cicd effectively
+A demo for using teraform and cicd effectively.
