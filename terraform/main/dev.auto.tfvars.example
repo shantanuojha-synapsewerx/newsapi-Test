@@ -1,0 +1,18 @@
+environment      = "dev"
+aws_region       = "ap-south-1"
+lambda_package_path = "../newsapi_ingest.zip"
+
+# Confluent Cloud configuration
+confluent_environment_id   = "env-xxxxx"
+confluent_kafka_cluster_id = "lkc-xxxxx"
+confluent_rest_endpoint    = "https://pkc-xxxxx.ap-south-2.aws.confluent.cloud:443"
+confluent_api_key          = "${var.confluent_api_key}"
+confluent_api_secret       = "${var.confluent_api_secret}"
+confluent_ksql_endpoint    = "https://pksqlc-xxxxx.ap-south-2.aws.confluent.cloud:443"
+
+# Optional overrides
+kafka_raw_partitions      = 3
+kafka_curated_partitions  = 3
+kafka_raw_retention_ms    = 604800000
+kafka_curated_retention_ms = 259200000
+kafka_curated_cleanup_policy = "delete"

@@ -19,7 +19,8 @@ variable "terraform_user_arn" {
 }
 
 resource "aws_s3_bucket" "tf_state" {
-  bucket = var.bucket_name
+  bucket        = var.bucket_name
+  force_destroy = true
 
   tags = {
     Name        = var.bucket_name
