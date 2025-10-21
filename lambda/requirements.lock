@@ -1,0 +1,3 @@
+requests
+boto3
+confluent-kafka==2.4.0 #necessary for lambda image
